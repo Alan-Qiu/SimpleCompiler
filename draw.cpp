@@ -6,9 +6,9 @@
 
 void DrawTree(ofstream& out, treeNode* curNode, treeNode* parNode, int parNum){
 	int curNum = my_id;
-	if (curNode != nullptr){
+	if (curNode != NULL){
 		out << "\tnode" << my_id++ << " [label=\"" << curNode->nodeName <<"\"];" <<endl;
-		if (parNode != nullptr){
+		if (parNode != NULL){
 			out << "\tnode" << parNum << " -> node" << curNum << ";" <<endl;
 		}
 		if (curNode->childNum > 0){
